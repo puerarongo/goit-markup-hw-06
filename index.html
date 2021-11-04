@@ -460,7 +460,7 @@
         </div>
       </section>
 
-      <!-- MODAL WINDOW -->
+      <!-- !!!MODAL WINDOW -->
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -479,30 +479,46 @@
             <ul class="form-modal__item">
               <li class="form-modal__list">
                 <label class="form-modal__label">Имя</label>
-                <input
-                  class="form-modal__input name"
-                  name="modal_name"
-                  type="text"
-                />
+                <div class="form-modal__into">
+                  <input
+                    class="form-modal__input name"
+                    name="modal_name"
+                    type="text"
+                  />
+                  <svg class="form-modal__svg man__svg">
+                    <use  href="./images/svg_directory/svg_sprite.svg#icon-man_phorm_vector"></use>
+                  </svg>
+                </div>
               </li>
 
               <li class="form-modal__list">
                 <label class="form-modal__label">Телефон</label>
-                <input
-                  class="form-modal__input tel"
-                  name="modal_tel"
-                  type="tel"
-                />
+                <div class="form-modal__into">
+                  <input
+                    class="form-modal__input tel"
+                    name="modal_tel"
+                    type="tel"
+                  />
+                  <svg class="form-modal__svg telephone__svg">
+                    <use  href="./images/svg_directory/svg_sprite.svg#icon-telephone_phorm_vector"></use>
+                  </svg>
+                </div>
               </li>
 
               <li class="form-modal__list">
                 <label class="form-modal__label">Почта</label>
-                <input
-                  class="form-modal__input email"
-                  name="modal_email"
-                  type="email"
-                />
+                <div class="form-modal__into">
+                  <input
+                    class="form-modal__input email"
+                    name="modal_email"
+                    type="email"
+                  />
+                  <svg class="form-modal__svg envelope__svg">
+                    <use  href="./images/svg_directory/svg_sprite.svg#icon-envelope_phorm_vector"></use>
+                  </svg>
+                </div>
               </li>
+
               <li class="form-modal__list list__textarea">
                 <label class="form-modal__label">Комментарий</label>
                 <textarea
@@ -511,17 +527,20 @@
                   placeholder="Введите текст"
                 ></textarea>
               </li>
-            </ul>
-            <label class="form-modal__label">
-              <input
-                class="form-modal__radio"
-                name="modal-radio"
-                type="radio"
+
+              <li class="form-modal__list list__checkbox">
+                <label class="form-modal__label">
+                <input
+                class="form-modal__checkbox"
+                name="modal-checkbox"
+                type="checkbox"
               />
-              Соглашаюсь с рассылкой и принимаю
-              <a class="form-modal__link">Условия договора</a>
-            </label>
-            <button class="main__button">Отправить</button>
+              Соглашаюсь с рассылкой и принимаю <a class="form-modal__link" href="#">Условия договора</a>
+                </label>
+              </li>
+            </ul>
+            
+            <button class="main__button" type="submit">Отправить</button>
           </form>
           <!-- /form -->
         </div>
@@ -600,7 +619,7 @@
 
         <div class="form__footer">
           <h3 class="features__title bottom">Подпишитесь на рассылку</h3>
-          <form>
+          <form class="form__footer-item"
             <label>
               <input
                 class="form-mail__footer"
@@ -609,7 +628,7 @@
                 placeholder="E-mail"
               />
             </label>
-            <button class="main__button form">
+            <button class="main__button form" type="submit">
               Подписаться<svg class="form-footer__svg">
                 <use
                   href="./images/svg_directory/svg_sprite.svg#icon-telegram_vector"

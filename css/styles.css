@@ -601,6 +601,10 @@ img {
 
 /* *Form__Footer */
 
+.form__footer-item {
+  display: flex;
+}
+
 .form-mail__footer {
   width: 358px;
   height: 50px;
@@ -852,6 +856,7 @@ img {
 .form-modal__item {
   padding-left: 40px;
   padding-right: 40px;
+  margin-bottom: 30px;
 
   text-align: left;
 }
@@ -865,15 +870,29 @@ img {
   margin-bottom: 20px;
 }
 
+.form-modal__list.list__checkbox .form-modal__label {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.form-modal__into {
+  position: relative;
+}
+
 .form-modal__label {
   display: block;
   margin-bottom: 4px;
+
+  font-size: 12px;
+  letter-spacing: 0.01em;
   color: var(--text-color);
 }
 
 .form-modal__input {
   width: 448px;
   height: 40px;
+  padding: 12px 12px 12px 42px;
 
   border: 1px solid var(--modal-form-border);
   border-radius: 4px;
@@ -891,10 +910,44 @@ img {
 }
 
 .form-modal__input:hover,
-.form-modal__input:focus,
-.form-modal__input:active {
+.form-modal__input:focus {
   border: 1px solid var(--active-linc-color);
 }
 
+.form-modal__svg {
+  position: absolute;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal__svg.man__svg {
+  width: 12px;
+  height: 12px;
+  left: 15px;
+  bottom: 14px;
+  fill: var(--modal-button-color, black);
+}
+
+.form-modal__svg.telephone__svg {
+  width: 13px;
+  height: 13px;
+  left: 14px;
+  bottom: 14px;
+}
+
+.form-modal__svg.envelope__svg {
+  width: 15px;
+  height: 12px;
+  left: 13.5px;
+  bottom: 14px;
+}
+
+.form-modal__input:hover + .form-modal__svg,
+.form-modal__input:focus + .form-modal__svg {
+  fill: var(--active-linc-color);
+}
+
 .form-modal__link {
+  text-decoration: underline;
+  color: var(--active-linc-color);
 }
