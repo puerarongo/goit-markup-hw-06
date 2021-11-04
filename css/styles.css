@@ -616,6 +616,7 @@ img {
   background-color: var(--invisible);
   border: 1px solid var(--footer-form-email);
   border-radius: 4px;
+  outline: none;
 }
 
 .main__button.form {
@@ -896,6 +897,7 @@ img {
 
   border: 1px solid var(--modal-form-border);
   border-radius: 4px;
+  outline: none;
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
