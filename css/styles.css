@@ -575,7 +575,7 @@ img {
 }
 
 .footer__network {
-  margin-right: 93px;
+  margin-right: 85px;
 }
 
 .features__title.bottom {
@@ -621,6 +621,7 @@ img {
 
 .main__button.form {
   display: flex;
+  padding: 10px 29px;
 }
 
 .form-footer__svg {
@@ -636,7 +637,7 @@ img {
 /* !!! Portfolio !!! */
 
 .visually-hidden {
-  /* Скрывает заголовок */
+  /* *Скрывает заголовок */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -825,11 +826,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__button:hover,
-.modal__button:focus {
-  background-color: rgb(235, 18, 18);
-}
-
 .modal__svg {
   width: 11px;
   height: 11px;
@@ -841,7 +837,7 @@ img {
 
 .modal__button:hover .modal__svg,
 .modal__button:focus .modal__svg {
-  fill: var(--header-white);
+  fill: var(--active-linc-color);
 }
 
 .modal__title {
@@ -891,7 +887,7 @@ img {
 }
 
 .form-modal__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding: 12px 12px 12px 42px;
 
@@ -920,13 +916,14 @@ img {
   position: absolute;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .form-modal__svg.man__svg {
   width: 12px;
   height: 12px;
   left: 15px;
-  bottom: 14px;
   fill: var(--modal-button-color, black);
 }
 
@@ -934,14 +931,12 @@ img {
   width: 13px;
   height: 13px;
   left: 14px;
-  bottom: 14px;
 }
 
 .form-modal__svg.envelope__svg {
   width: 15px;
   height: 12px;
   left: 13.5px;
-  bottom: 14px;
 }
 
 .form-modal__input:hover + .form-modal__svg,
@@ -952,4 +947,30 @@ img {
 .form-modal__link {
   text-decoration: underline;
   color: var(--active-linc-color);
+}
+
+.form-modal__label.label__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-modal__label.label__checkbox::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 1px solid var(--modal-button-color, black);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.form-modal__checkbox:checked + .form-modal__label.label__checkbox::before {
+  background-image: url(../images/svg_directory/box-check_svg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
 }
